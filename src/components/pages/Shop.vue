@@ -118,7 +118,7 @@
                                                     <img :src="prdSideB.imgsrc" alt="">
                                                 </div>
                                                 <div class="latest-product__item__text">
-                                                    <router-link :to="{ name: 'details', params: { projectId: prdSideB.id }}">{{prdSideB.title}}</router-link>
+                                                    <router-link :to="{ name: 'details', params: { productId: prdSideB.id }}">{{prdSideB.title}}</router-link>
                                                     <span>{{prdSideB.priceCount}}</span>
                                                 </div>
                                             </a>
@@ -152,7 +152,7 @@
                                         </div>
                                         <div class="product__discount__item__text">
                                             <span>{{sale.title}}</span>
-                                            <router-link :to="{ name: 'details', params: { projectId: sale.id }}">{{sale.title}}</router-link>
+                                            <router-link :to="{ name: 'details', params: { productId: sale.id }}">{{sale.title}}</router-link>
                                             <div class="product__item__price">{{sale.price}}<span>{{sale.priceCount}}</span></div>
                                         </div>
                                     </div>
@@ -199,7 +199,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <router-link :to="{ name: 'details', params: { projectId: product.id }}">{{product.title}}</router-link>
+                                    <router-link :to="{ name: 'details', params: { productId: product.id }}">{{product.title}}</router-link>
                                     <h5>{{product.priceCount}}</h5>
                                 </div>
                             </div>
@@ -218,7 +218,7 @@
     </div>
   </template>
   
-  <script>
+  <script >
 import Hero from '../layouts/Hero.vue';
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'

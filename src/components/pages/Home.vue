@@ -3,10 +3,12 @@
     <Hero />
       <section class="categories" style="margin-top: 5rem;">
           <VueSlickCarousel v-bind="SlideCateList">
-          <div class="swiper-slide" v-for="cate in cateList">
-              <div class="img"><img :src = "cate.imgsrc" width = "380" height = "300" /></div>
-              <h5 class="title"> {{ cate.title }}</h5>
-          </div> 
+            <div class="swiper-slide" v-for="cate in cateList">
+                <router-link :to="{ name: 'details', params: { projectId: cate.id }}">
+                    <div class="img"><img :src = "cate.imgsrc" width = "380" height = "300" /></div>
+                    <h5 class="title"> {{ cate.title }}</h5>
+                </router-link>
+            </div> 
           </VueSlickCarousel>
       </section>
       <section class="featured spad">
@@ -28,20 +30,22 @@
               </div>
               <div class="row featured__filter" id="categories">
                   <div id="cuqua" class="col-lg-3 col-md-4 col-sm-6 mix" v-for="feature in cateList" v-bind:class="feature.class">
-                  <div class="featured__item">
-                      <div class="featured__item__pic set-bg">
-                          <div class="img"><img :src = "feature.imgsrc" width = "300" height = "250" /></div>
-                          <ul class="featured__item__pic__hover">
-                              <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                              <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                              <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                          </ul>
-                      </div>
-                      <div class="featured__item__text">
-                          <h6><a href="#">{{ feature.title }}</a></h6>
-                          <h5>{{ feature.price }}</h5>
-                      </div>
-                  </div>
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg">
+                            <div class="img"><img :src = "feature.imgsrc" width = "300" height = "250" /></div>
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <router-link :to="{ name: 'details', params: { projectId: feature.id }}">
+                            <div class="featured__item__text">
+                                <h6><a href="#">{{ feature.title }}</a></h6>
+                                <h5>{{ feature.price }}</h5>
+                            </div>
+                        </router-link>
+                    </div>
               </div>
           </div>
       </section>
@@ -70,7 +74,8 @@
                           <div class="latest-product__slider owl-carousel">
                               <div class="latest-prdouct__slider__list latestPrdouct">
                                   <VueSlickCarousel v-bind="slideProductList">
-                                      <a href="#" class="latest-product__item"  v-for="product in productList">
+                                    <div href="#" class="latest-product__item"  v-for="product in productList">
+                                        <router-link :to="{ name: 'details', params: { projectId: product.id }}">
                                           <div class="latest-product__item__pic">
                                               <img :src="product.imgsrc" alt="">
                                           </div>
@@ -78,7 +83,8 @@
                                               <h6>{{product.title}}</h6>
                                               <span>{{product.price}}</span>
                                           </div>
-                                      </a>
+                                        </router-link>
+                                    </div>    
                                   </VueSlickCarousel>
                               </div>
                           </div>
@@ -90,7 +96,8 @@
                           <div class="latest-product__slider owl-carousel">
                               <div class="latest-prdouct__slider__list latestPrdouct">
                                   <VueSlickCarousel v-bind="slideProductList">
-                                      <a href="#" class="latest-product__item"  v-for="product in productList">
+                                    <div href="#" class="latest-product__item"  v-for="product in productList">
+                                        <router-link :to="{ name: 'details', params: { projectId: product.id }}">
                                           <div class="latest-product__item__pic">
                                               <img :src="product.imgsrc" alt="">
                                           </div>
@@ -98,7 +105,8 @@
                                               <h6>{{product.title}}</h6>
                                               <span>{{product.price}}</span>
                                           </div>
-                                      </a>
+                                        </router-link>
+                                    </div>   
                                   </VueSlickCarousel>
                               </div>
                           </div>
@@ -110,7 +118,8 @@
                       <div class="latest-product__slider owl-carousel">
                           <div class="latest-prdouct__slider__list latestPrdouct">
                                   <VueSlickCarousel v-bind="slideProductList">
-                                      <a href="#" class="latest-product__item"  v-for="product in productList">
+                                    <div href="#" class="latest-product__item"  v-for="product in productList">
+                                        <router-link :to="{ name: 'details', params: { projectId: product.id }}">
                                           <div class="latest-product__item__pic">
                                               <img :src="product.imgsrc" alt="">
                                           </div>
@@ -118,7 +127,8 @@
                                               <h6>{{product.title}}</h6>
                                               <span>{{product.price}}</span>
                                           </div>
-                                      </a>
+                                        </router-link>
+                                    </div>   
                                   </VueSlickCarousel>
                               </div>
                           </div>
@@ -300,5 +310,8 @@ export default {
   .slick-prev:before, .slick-next:before{
       color: #000 !important;
   }
-  
+  a{
+        text-decoration: none !important;
+    }
+
 </style>

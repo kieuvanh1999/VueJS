@@ -27,7 +27,7 @@
                         <div class="blog__sidebar__item">
                             <h4>Recent News</h4>
                             <div class="blog__sidebar__recent"  v-for="sidBar in sideBar">
-                                <a href="#" class="blog__sidebar__recent__item">
+                                <router-link :to="{ name: 'BlogDetail', params: { blogDetailId: sidBar.id }}" class="blog__sidebar__recent__item">
                                     <div class="blog__sidebar__recent__item__pic">
                                         <img :src="sidBar.imgsrc" alt="">
                                     </div>
@@ -35,7 +35,7 @@
                                         <h6>{{sidBar.title}}</h6>
                                         <span>{{sidBar.date}}</span>
                                     </div>
-                                </a>
+                                </router-link>>
                             </div>
                         </div>
                         <div class="blog__sidebar__item">
@@ -63,9 +63,9 @@
                                         <li><i class="fa fa-calendar-o"></i>{{blog.date}}</li>
                                         <li><i class="fa fa-comment-o"></i> 5</li>
                                     </ul>
-                                    <h5><a href="#">{{blog.title}}</a></h5>
+                                    <h5><router-link :to="{ name: 'BlogDetail', params: { blogDetailId: blog.id }}">{{blog.title}}</router-link></h5>
                                     <p>{{blog.content}}</p>
-                                    <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                    <router-link :to="{ name: 'BlogDetail', params: { blogDetailId: blog.id }}"  class="blog__btn">READ MORE <span class="arrow_right"></span></router-link>
                                 </div>
                             </div>
                         </div>

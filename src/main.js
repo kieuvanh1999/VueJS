@@ -9,12 +9,17 @@ import VueSweetalert2 from 'vue-sweetalert2';
 import './scss/style.css'
 import './css/style.css'
 import './css/font-awesome.min.css'
+import './css/slicknav.min.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import 'sweetalert2/dist/sweetalert2.min.css';
+import 'sweetalert2/dist/sweetalert2.min.css'
 
 import './js/main'
+import './js/jquery.slicknav.js'
 import './js/mixitup.min.js'
+import './js/owl.carousel.min.js'
+import './js/jquery-ui.min.js'
+
 
 
 if (localStorage.users === undefined) {

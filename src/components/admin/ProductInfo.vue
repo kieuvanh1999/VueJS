@@ -12,7 +12,7 @@
                         <input type="text" class="form-control" />
                     </div>
                 </div> -->
-                <div class="form-group row">
+                <div class="form-group row">  
                     <label for="inputPassword" class="col-sm-3 col-form-label">Product name <span style="color: red">*</span></label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" placeholder="Product Name *" @blur="validate()" v-model="product.name" v-bind:class="{'is-invalid': errors.name}"/>

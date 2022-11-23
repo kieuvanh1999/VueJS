@@ -1,5 +1,6 @@
 <template>
     <section class="blog-details spad">
+        <Banner />
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-5 order-md-1 order-2">
@@ -114,15 +115,18 @@
                         </div>
                     </div>
                 </div>
-                <Blog />
+         
             </div>
-        </div>
+        </div>      
+         <Blog />
     </section>
 </template>
 
 <script>
-    import Blog from '../layouts/Blog.vue';
+    import Banner from '../layouts/banner.vue';
+import Blog from '../layouts/Blog.vue';
     export default {
-        components: { Blog },
+        components: { Blog, Banner },
+        props: ["id"],
     }
 </script>

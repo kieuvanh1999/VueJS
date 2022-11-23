@@ -7,7 +7,7 @@
     Created: Colorlib
 ---------------------------------------------------------  */
 import jQuery from "jquery";
-import validator from "validator";
+
 
 'use strict';
 
@@ -57,9 +57,16 @@ import validator from "validator";
     /*------------------
 		Navigation
 	--------------------*/
+   
     /*-----------------------
         Categories Slider
     ------------------------*/
+    /*-----------------------
+		Price Range Slider
+	------------------------ */ 
+    $('.hero__categories__all').on('click', function(){
+        $('.hero__categories ul').slideToggle(400);
+    });
 
     /*------------------
 		Single Product
@@ -97,9 +104,9 @@ import validator from "validator";
         $button.parent().find('input').val(newVal);
     });
     
+   
+    
 })(jQuery);
 // formatNumber()
 // Allow the formatNumber function to be used as a filter
-
-
 

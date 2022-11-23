@@ -90,12 +90,13 @@ export default new Router({
       component: ShopingCart
     }, 
     {
-      path: '/blogDetail',
+      path: '/:blogDetailId/blogDetail',
       name: 'BlogDetail',
-      component: BlogDetail
+      component: BlogDetail,
+      props: true
     }, 
     {
-      path: '/:projectId/details',
+      path: '/:productId/details',
       name: 'details',
       component: ProductDetail,
       props: true

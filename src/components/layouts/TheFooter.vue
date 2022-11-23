@@ -5,7 +5,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            <routerLink to="/"><img src="../../assets/logo.png" alt=""></routerLink>
                         </div>
                         <ul>
                             <li>Address: 60-49 Road 11378 New York</li>
@@ -68,6 +68,11 @@
 
 <script>
     export default {
-    
+
     }
 </script>
+<style>
+    ol, ul {
+        padding-left: 0;
+    }
+</style>

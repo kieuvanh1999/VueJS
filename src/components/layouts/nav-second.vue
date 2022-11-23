@@ -13,11 +13,11 @@
                             <li><router-link to="/Shop">Shop</router-link></li>
                             <li><a>Pages</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><router-link to="/product-detail">Shop Details</router-link></li>
+                                    <li><router-link to="/:productId/details">Shop Details</router-link></li>
                                     <li><router-link to="/testPhanTrang">Test Phan Trang</router-link></li>
                                     <li><router-link to="/shoping-cart">Shoping Cart</router-link></li>
                                     <li><router-link to="/checkOut">Check Out</router-link></li>
-                                    <li><router-link to="/blogDetail">Blog Details</router-link></li>
+                                    <li><router-link to="/:blogDetailId/blogDetail">Blog Details</router-link></li>
                                 </ul>   
                             </li>
                             <li><router-link to="/Blog">Blog</router-link></li>

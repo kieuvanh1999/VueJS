@@ -19,7 +19,7 @@
                                   <li><i class="fa fa-calendar-o"></i> {{ blog.date }}</li>
                                   <li><i class="fa fa-comment-o"></i> {{ blog.commentCount }}</li>
                               </ul>
-                              <h5><a href="#">{{ blog.title }}</a></h5>
+                              <h5> <router-link :to="{ name: 'BlogDetail', params: { blogDetailId: blog.id }}">{{ blog.title }}</router-link></h5>
                               <p>{{ blog.content }}</p>
                           </div>
                       </div>

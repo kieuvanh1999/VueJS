@@ -24,6 +24,6 @@ import TheFooter from './components/layouts/TheFooter.vue';
   </script>
 
   <style>
-
+  
   </style>
   
